@@ -7,12 +7,12 @@
 Общее количество тест-кейсов - 31 (2 позитивных, 29 негативных) - для каждого из способа оплаты покупки тура (оплата по дебетовой карте/выдача кредита по данным банковской карты) 
 
 ### При подключении к СУБД MySQL
-![image](file:///C:/Users/anisimova.om/Desktop/Allure%20Report%20SQL.jpg)
+![Allure Report SQL](https://user-images.githubusercontent.com/87532950/171957044-2ce79659-6542-4a54-bdcc-66e9addf1f24.jpg)
 * успешных тестов - 48 (77,41%)
 * неуспешных тестов - 14 (22,59%)
 
 ### При подключении к СУБД PostgreSQL
-![image](file:///C:/Users/anisimova.om/Desktop/Allure%20Report%20PostgreSQL.jpg)
+![Allure Report PostgreSQL](https://user-images.githubusercontent.com/87532950/171957137-6a3e0de3-087b-4de5-922d-21614894ca86.jpg)
 * успешных тестов - 48 (77,41%)
 * неуспешных тестов - 14 (22,59%)
 
