@@ -16,9 +16,9 @@
 Приложение должно в собственной СУБД сохранять информацию о том, каким способом был совершён платёж и успешно ли он был совершён (при этом данные карт сохранять не допускается).
 
 ## Документация 
-* План автоматизации
-* Отчет по итогам тестирования
-* Отчет по итогам автоматизации
+* [План автоматизации](https://github.com/Ksuschka/QADiploma/blob/master/documentation/Plan.md)
+* [Отчет по итогам тестирования](https://github.com/Ksuschka/QADiploma/blob/master/documentation/Report.md)
+* [Отчет по итогам автоматизации](https://github.com/Ksuschka/QADiploma/blob/master/documentation/Summary.md)
 
 ## Инструкция для запуска автотестов:
 
