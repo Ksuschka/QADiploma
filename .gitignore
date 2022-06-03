@@ -5,6 +5,7 @@ HELP.md
 build/
 data_mysql/
 data_post/
+.allure
 
 ### STS ###
 .apt_generated
