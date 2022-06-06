@@ -37,6 +37,7 @@
 
 Убедиться в работоспособности системы. Приложение должно быть доступно по адресу:
 `http://localhost:8080/`
+
 6. Запуск тестов. Открыть новую вкладку в терминале IDEA и ввести команду: 
 * **Для MySQL:** `gradlew -Ddb.url=jdbc:mysql://localhost:3306/app_db clean test`
 * **Для PostgreSQL:** `gradlew -Ddb.url=jdbc:postgresql://localhost:5432/db clean test`
