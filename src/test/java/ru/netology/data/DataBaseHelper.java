@@ -11,10 +11,9 @@ import static java.sql.DriverManager.getConnection;
 
 public class DataBaseHelper {
 
-    public static Connection getConnection() throws SQLException {
-        return DriverManager.getConnection(
-                "jdbc:mysql://localhost:3306/app_db", "app", "pass");
-    }
+    static String url = System.getProperty("db.url");
+    static String user = System.getProperty("db.user");
+    static String password = System.getProperty("db.password");
 
 
     private DataBaseHelper() {
@@ -24,7 +23,7 @@ public class DataBaseHelper {
         val statusSql = "SELECT status FROM payment_entity ORDER BY created DESC LIMIT 1";
 
         try (
-                val conn = getConnection();
+                val conn = DriverManager.getConnection(url, user, password);
                 val statusStmt = conn.createStatement();
         ) {
             try (val rs = statusStmt.executeQuery(statusSql)) {
@@ -44,7 +43,7 @@ public class DataBaseHelper {
         val statusSql = "SELECT status FROM credit_request_entity ORDER BY created DESC LIMIT 1";
 
         try (
-                val conn = getConnection();
+                val conn = DriverManager.getConnection(url, user, password);
                 val statusStmt = conn.createStatement();
         ) {
             try (val rs = statusStmt.executeQuery(statusSql)) {
@@ -66,7 +65,7 @@ public class DataBaseHelper {
         val deletePaymentEntity = "DELETE FROM payment_entity;";
         val deleteCreditRequestEntity = "DELETE FROM credit_request_entity;";
         try (
-                val conn = getConnection()) {
+                val conn = DriverManager.getConnection(url, user, password)) {
             runner.update(conn, deleteOrderEntity);
             runner.update(conn, deletePaymentEntity);
             runner.update(conn, deleteCreditRequestEntity);
