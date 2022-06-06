@@ -27,14 +27,19 @@
 3. Установить Docker Desktop
 4. Развернуть контейнеры MySql, PostgreSQL и Node.js с помощью команды `docker-compose up`
 5. Запуск SUT. Открыть новую вкладку в терминале IDEA и ввести команду:
-* с поддержкой MySQL: `java -Dspring.datasource.url=jdbc:mysql://localhost:3306/app_db -jar artifacts/aqa-shop.jar` 
-* с поддержкой PostgreSQL : `java -Dspring.datasource.url=jdbc:postgresql://localhost:5432/db -jar artifacts/aqa-shop.jar`
+* **с поддержкой MySQL:** 
+
+`java -Dspring.datasource.url=jdbc:mysql://localhost:3306/app_db -jar artifacts/aqa-shop.jar`
+
+* **с поддержкой PostgreSQL:** 
+
+`java -Dspring.datasource.url=jdbc:postgresql://localhost:5432/db -jar artifacts/aqa-shop.jar`
 
 Убедиться в работоспособности системы. Приложение должно быть доступно по адресу:
 `http://localhost:8080/`
 6. Запуск тестов. Открыть новую вкладку в терминале IDEA и ввести команду: 
-* Для MySQL: `gradlew -Ddb.url=jdbc:mysql://localhost:3306/app_db clean test`
-* Для PostgreSQL: `gradlew -Ddb.url=jdbc:postgresql://localhost:5432/db clean test`
+* **Для MySQL:** `gradlew -Ddb.url=jdbc:mysql://localhost:3306/app_db clean test`
+* **Для PostgreSQL:** `gradlew -Ddb.url=jdbc:postgresql://localhost:5432/db clean test`
 
 7. Генерируем отчет Allure по итогам тестирования, который автоматически откроется в браузере.
 
